@@ -1,0 +1,12 @@
+.env
+data/
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+*.pdf
+*.png
+*.jpg
+*.jpeg
+.DS_Store

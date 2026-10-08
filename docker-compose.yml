@@ -1,0 +1,11 @@
+services:
+  anonymizer:
+    build: .
+    container_name: anonymizer
+    restart: unless-stopped
+    env_file: [.env]
+    environment:
+      DATA_DIR: /data
+    volumes: ["./data:/data"]
+    # Bind to localhost and put a TLS-terminating reverse proxy in front for production.
+    ports: ["127.0.0.1:8000:8000"]
